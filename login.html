@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+
+<body >
+    
+    <form action="home.html" method="get" >
+        <label for="usrName">Name: </label> <br>
+        <input type="text" id="usrName" placeholder="Enter Your Name" size="20" maxlength="10" name="usrName" required>
+        <br><br>
+        <label for="Pass">Password: </label><br>
+        <input type="password" id="Pass" size="20" required>
+        <br><br>
+        
+        <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe" onchange="remeberMeLocaolStorge()">
+        <label for="rememberMe"> Remember Me </label>
+
+        <br><br>
+        <!-- <input type="submit" value="Submit" onclick="setDataLocalStorge()"> -->
+        <button onclick="setDataLocalStorge()"> log in with local storage </button> <br><br>
+        <button onclick="setDataCookies()"> log in with cookies </button>
+        </form>
+        <!-- <button onclick="removeCookies()">Remove cookies</button> -->
+
+
+    <script src="js.js"></script> 
+
+
+</body>
+
+
+
+</html>

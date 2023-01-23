@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 </head>
 
-<body >
-    
-    <!-- <button ></button>
-    <p id=''> </p>  -->
-    
+<body>
 
 
-    <script src="js.js"></script> 
+    <div id="getname"> </div>
+    <div id="getpass"> </div>
+
+    <script>
+        if (localStorage.getItem("userName") && localStorage.getItem("Pass")) {
+            document.getElementById("getname").innerHTML = "User Name from local storage: " + localStorage.getItem("userName")
+            document.getElementById("getpass").innerHTML = "Pass from local storage: " + localStorage.getItem("Pass")
+        }
+
+
+        else{var getCookie = decodeURIComponent(document.cookie);
+        if (getCookie) {
+            var cookiesArr = getCookie.split(';');
+            console.log(cookiesArr)
+            for (var i = 0; i < cookiesArr.length; i++) {
+                var x = cookiesArr[i].substring(cookiesArr[i].indexOf('=') + 1)
+                //console.log(x)
+                var para = document.createElement("p");
+                para.innerText = "User Data From Cookies: " + x;
+                document.body.appendChild(para);
+            }
+        }}
+
+    </script>
+
+
 
 
 </body>
