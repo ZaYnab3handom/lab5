@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div style="display: flex; align-items: center;">
+    <img id="usrImage" src="" alt="FailToLoad">
+    <div style="display: flex;flex-direction: column;margin-left: 20px;">
+    <div id="firstName">First Name: </div>
+    <div id="lastName">Last Name: </div>
+    </div>
+    </div>
+
+    <br><br>
+    <h2>Get User By ID</h2>
+    <input type="text"  id="id" placeholder="Enter User ID:">
+    <button onclick="getUserById()" >Dispaly</button><br>
+    <br><div id="userdata" style="display: flex; align-items: center;justify-content: space-between; width: 250px;">
+        <div style="display: flex;align-items: center; ">
+            <img id="usrImage1" src="" alt="FailToLoad"  style=" width: 128px;height: 128px; visibility:hidden">
+           <div>
+            <div id="firstName1"> </div>
+            <div id="lastName1"></div>
+            </div></div>
+    </div>
+    <br>
+    <h2>Select User Name</h2>
+        <div id="userdiv" style="display: flex; align-items: center;justify-content: space-between; width: 250px;"></div>
+<select id="selectbar"></select>
+ <div id="select">
+       <br> <div style="display: flex;align-items: center; ">
+            <img id="usrImage2" src="" alt="FailToLoad"  style=" width: 128px;height: 128px; visibility:hidden">
+           <div>
+            <div id="firstName2"> </div>
+            <div id="lastName2"></div>
+            </div></div>
+    </div>
+    
+    <script src="ajax.js"></script> 
+
+
+
+</body>
+</html>
